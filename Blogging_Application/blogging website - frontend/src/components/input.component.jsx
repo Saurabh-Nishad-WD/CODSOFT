@@ -21,7 +21,7 @@ const InputBox = ({name,type,id,value,placeholder,icon}) =>{
         {
             type == "password" ?
 
-            <i class={`fi fi-rr-eye${(!seePassword ? "-crossed " : " ")} input-icon cursor-pointer left-[auto] right-4`}
+            <i className={`fi fi-rr-eye${(!seePassword ? "-crossed " : " ")} input-icon cursor-pointer left-[auto] right-4`}
             onClick={() => setSeePassword(value => !value)}
             ></i>
             :""

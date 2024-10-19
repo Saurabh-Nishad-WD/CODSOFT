@@ -3,6 +3,11 @@ import google from '../imgs/google.png'
 import { Link } from "react-router-dom";
 import AnimationWrapper from '../common/page-animation'
 const UserAuthForm = ({type}) =>{
+
+    const handelSubmit = (e) =>{
+        e.preventDefault();
+    }
+
     return (
         <>
       <AnimationWrapper keyValue ={type}>
@@ -34,6 +39,7 @@ const UserAuthForm = ({type}) =>{
 
             <button className="btn-dark center mt-14"
             type="submit"
+            onClick={handelSubmit}
             >
                 {type.replace("-"," ")}
             </button>
