@@ -27,6 +27,12 @@ try{
   if(!emailRegex.test(email)){ 
     return next({code:501,message:"please provide correct email"});
 }
+
+const isExist = await User.findOne({"personal_info.email":email});
+
+  if(isExist){ 
+    return next({code:409,message:"user ki ma ka exists"});
+}
   if(!password){ 
     return next({code:501,message:"please provide password"});
 }

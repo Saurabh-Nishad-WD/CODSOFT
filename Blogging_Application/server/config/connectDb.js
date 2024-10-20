@@ -5,6 +5,7 @@ const connectDb = async (req,res) =>{
         console.log(`connected to mongoDB server at ${mongoose.connection.host}`);
     }
     catch(err){
+        console.log("faield to connect at server")
          res.status(500).send({
             message:"error",
             err
